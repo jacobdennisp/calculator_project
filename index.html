@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HTML Calculator | Minor Project 2</title>
+        <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css" integrity="sha512-YFENbnqHbCRmJt5d+9lHimyEMt8LKSNTMLSaHjvsclnZGICeY/0KYEeiHwD1Ux4Tcao0h60tdcMv+0GljvWyHg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            .color-teal{
+                color: teal;
+            }
+            .icon-lg{
+                font-size: 50px;
+            }
+            .icon-sm{
+                font-size: 25px;
+            }
+            .remove-text-decoration{
+                text-decoration: none;
+               
+            }
+            .remove-bullets {
+                list-style: none;
+            }
+            .calc-btn{
+                width: 60px;
+                height: 60px;
+            }
+            .calc-display{
+                background-color:grey;
+                height: 100px;
+                width:310px;
+                border-radius:5px
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="container p-5">
+            <div class="d-flex justify-content-center">
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div class="card" >
+                        <div class="d-flex justify-content-evenly align-items-center p-3">
+                            <div class="row">                            
+                                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 calc-display">
+                                    <div class="" id="number_div"></div>
+                                    <div class="" id="value_div"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-evenly align-items-center p-3">
+                            <div class="row">                            
+                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                    <button type="button" class="btn btn-light calc-btn" data-event_key="NumLock" ><small>Num Lock</small></button>                                
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                    <button type="button" class="btn btn-light calc-btn" data-event_key="Delete">CE</button>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                    <button type="button" class="btn btn-light calc-btn" data-event_key="Delete">DEL</button>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                    <button type="button" class="btn btn-light calc-btn" data-event_key="/">/</button>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="d-flex justify-content-evenly align-items-center p-3">
+                            <div class="row">                            
+                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                    <button type="button" class="btn btn-light calc-btn" data-event_key="7">7</button>                                
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                    <button type="button" class="btn btn-light calc-btn" data-event_key="8">8</button>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                    <button type="button" class="btn btn-light calc-btn" data-event_key="9">9</button>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                    <button type="button" class="btn btn-light calc-btn" data-event_key="*">x</button>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="d-flex justify-content-evenly align-items-center p-3">
+                            <div class="row">                            
+                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                    <button type="button" class="btn btn-light calc-btn" data-event_key="4">4</button>                                
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                    <button type="button" class="btn btn-light calc-btn" data-event_key="5">5</button>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                    <button type="button" class="btn btn-light calc-btn" data-event_key="6">6</button>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                    <button type="button" class="btn btn-light calc-btn" data-event_key="-">-</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-evenly align-items-center p-3">
+                            <div class="row">                            
+                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                    <button type="button" class="btn btn-light calc-btn" data-event_key="1">1</button>                                
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                    <button type="button" class="btn btn-light calc-btn" data-event_key="2">2</button>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                    <button type="button" class="btn btn-light calc-btn" data-event_key="3">3</button>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                    <button type="button" class="btn btn-light calc-btn" data-event_key="+">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-evenly align-items-center p-3">
+                            <div class="row">                            
+                                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                    <button type="button" class="btn btn-light calc-btn" style="width: 150px;" data-event_key="0">0</button>                                
+                                </div>
+                                
+                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                    <button type="button" class="btn btn-light calc-btn" data-event_key=".">.</button>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                    <button type="button" class="btn btn-light calc-btn" data-event_key="=">=</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.2.js" integrity="sha256-pkn2CUZmheSeyssYw3vMp1+xyub4m+e+QK4sQskvuo4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="vendor/bootstrap/js/bootstrap.js"></script>
+        <script>
+            //Checking Numpad and keyboard click and highligh button
+            $(document).on('keypress keydown',function(e){
+                $('button[data-event_key="'+e.key+'"]').addClass('active')
+                if(e.key != '+' && e.key != '' && e.key != '')
+            });
+
+            //Remove highlight if the key is released
+            $(document).on('keyup',function(e){
+                $('button[data-event_key="'+e.key+'"]').removeClass('active')
+            });
+
+            //Catch Event Key from button press on Calculator
+            $(".calc-btn").on('click',function(e){
+                console.log($(this).data('event_key'));
+            })
+
+           
+
+        </script>
+    </body>
+</html>
